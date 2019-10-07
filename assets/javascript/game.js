@@ -15,14 +15,29 @@ var lapisValue = 0;
 var amethystValue = 0;
 
 //functions
-
+//generates and displays target number
 function generateTargetNum() {
     result = Math.floor(Math.random() * (120 - 20)) + 19;
     targetNumber.text(result);
 };
+//generates random crystal value
+function generateCrystalVal() {
+    return Math.floor(Math.random() * 12 + 1);
+};
+//sets new crystal values
+function resetCrystals() {
+    diamondValue = generateCrystalVal();
+    rubyValue = generateCrystalVal();
+    lapisValue = generateCrystalVal();
+    amethystValue = generateCrystalVal();
 
-generateTargetNum();
+    console.log(diamondValue);
+    console.log(rubyValue);
+    console.log(lapisValue);
+    console.log(amethystValue);
+};
 
+resetCrystals();
 
 //on game start, generate a random number between 19-120
 //display random number in target number div 
