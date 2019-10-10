@@ -1,21 +1,12 @@
 $(document).ready(function () {
 
-    //element variables
-    /*var diamond = $("#diamond");
-    var ruby = $("#ruby");
-    var lapis = $("#lapis");
-    var amethyst = $("#amethyst");*/
-    //var targetNumber = $("#target-number");
-    //var userScore = $("#user-score");
-    //var wins = $("#wins");
-    //var losses = $("#losses");
 
     //button values
     var diamondValue;
     var rubyValue;
     var lapisValue;
     var amethystValue;
-
+    //counters
     var scoreTally = 0;
     var targetVal;
     var winTally = 0;
@@ -41,11 +32,13 @@ $(document).ready(function () {
         scoreTally = 0;
         $("#user-score").text(scoreTally);
         //on game start, generate a random number between 19-120 and display in target number div
+
         generateTargetNum();
-        console.log(diamondValue);
-        console.log(rubyValue);
-        console.log(lapisValue);
-        console.log(amethystValue);
+        //test logs
+        //console.log(diamondValue);
+        //console.log(rubyValue);
+        //console.log(lapisValue);
+        //console.log(amethystValue);
     };
     //adds gem value to user's score
     function tallyScore(gemVal) {
@@ -80,6 +73,7 @@ $(document).ready(function () {
     function mainGame() {
 
         resetCrystals();
+
         //when clicked, add the crystal's number to the player's total
         //after each click, check score against the target number
 
